@@ -7,9 +7,10 @@ export default function Referrer () {
 
     useEffect(() => {
         setReferrer(document.referrer)
+        console.log(document.referrer)
     }, [])
 
   return (
-    <p>referrer{referrer}</p>
+    <p>referrer:{referrer}</p>
   );
 };
