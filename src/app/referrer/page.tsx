@@ -4,13 +4,16 @@ import { useEffect, useState } from "react";
 
 export default function Referrer () {
     const [referrer, setReferrer] = useState('')
+    const [browser, setBrowser] = useState('')
 
     useEffect(() => {
         setReferrer(document.referrer)
-        console.log(document.referrer)
+        setBrowser(window.navigator.userAgent)
     }, [])
 
-  return (
+  return (<>
     <p>referrer:{referrer}</p>
+    <p>browser:{browser}</p>
+  </>
   );
 };
